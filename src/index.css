@@ -20,7 +20,8 @@
 
 .addressFinder {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   padding: 3em;
 }
 
@@ -34,6 +35,11 @@
 .search-container {
   position: relative;
   width: 200px;
+}
+
+.addressConfirmation {
+  margin-top: 3em;
+  width: 30%;
 }
 
 .dropdown {
@@ -79,7 +85,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: grey
   cursor: pointer;
   transition: border-color 0.25s;
 }

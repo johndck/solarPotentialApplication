@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 
@@ -7,13 +6,18 @@ function isValidPostcode(input) {
   return regex.test(input);
 }
 
-function Search() {
+function Search({
+  coordinates,
+  setCoordinates,
+  isCoordinatesAvailable,
+  setIsCoordinatesAvailable,
+  setShowResults,
+}) {
   // detects input box changes from the user
   // holds an array of postcode results from the API
   const [input, setInput] = useState("");
   const [postcodes, setPostcodes] = useState([]);
   const [selectedPostcode, setSelectedPostcode] = useState("");
-  const [coordinates, setCoordinates] = useState({});
   const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
@@ -56,8 +60,11 @@ function Search() {
       if (data.status === 200) {
         if (data.result === null) {
           setErrorMessage("Wrong postcode format");
+          setIsCoordinatesAvailable(false);
         } else {
           setCoordinates(data.result);
+          setIsCoordinatesAvailable(true);
+
           console.log(`Your selected postcode was: ${selectedPostcode}`);
           console.log(
             `Coordinates for ${postcode}: ${data.result.latitude}, ${data.result.longitude}`
@@ -81,6 +88,9 @@ function Search() {
           if (event.target.value === "") {
             setPostcodes([]);
             setErrorMessage("");
+            setIsCoordinatesAvailable(false);
+            setShowResults(false);
+            setCoordinates({});
           }
         }}
         placeholder="enter your postcode"
