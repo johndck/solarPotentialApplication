@@ -62,7 +62,7 @@ html {
   width: 1200px;
   max-width: 80%;
   margin: 0 auto;
-  border: 1px solid #ccc;
+  /*border: 1px solid #ccc;*/
 }
 
 .navbar {
@@ -144,7 +144,7 @@ html {
   align-items: center;
   padding-top: 1rem;
   min-height: 15rem;
-  margin-bottom: 3rem;
+  padding-bottom: 3rem;
   /*border: 1px solid white;*/
 }
 
@@ -205,7 +205,7 @@ html {
 
 .dropdown {
   position: absolute;
-  width: 100%;
+  width: 70%;
   top: 100%;
   background: white;
   border: 1px solid #ccc;
@@ -232,6 +232,39 @@ html {
 
 .solarEstimate h3 {
   padding-bottom: 0.8rem;
+}
+
+/* Sunny details section */
+
+.sunnyDetailsSection {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 12rem;
+}
+.detailsLeft {
+  background-color: var(--siteRed);
+}
+.detailsRight {
+  background-color: var(--siteGreen);
+}
+
+.contentLeft {
+  padding-left: 21%;
+}
+.contentRight {
+  padding-right: 21%;
+}
+
+.detailsLeft h3 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: var(--background-color);
+}
+
+.detailsRight h3 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: var(--background-color);
 }
 
 a {
@@ -269,5 +302,9 @@ h1 {
 
   .addressConfirmationText {
     text-align: center;
+  }
+
+  .sunnyDetailsSection {
+    grid-template-columns: 100%;
   }
 }
