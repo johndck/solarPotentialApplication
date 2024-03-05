@@ -6,6 +6,7 @@ import Notify from "./pages/notify";
 import Results from "./pages/results";
 import Error from "./pages/error";
 import Navbar from "./components/navbar";
+import Footer from "./components/footer";
 
 function App() {
   return (
@@ -18,7 +19,12 @@ function App() {
         <Route path="/results" element={<Results />} />
         <Route path="*" element={<Error />} />
       </Routes>
-      <footer>our footer</footer>
+      <Footer />
+      <Footer />
+      <Footer />
+      <Footer />
+      <Footer />
+      <Footer />
     </BrowserRouter>
   );
 }

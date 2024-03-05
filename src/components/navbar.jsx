@@ -1,13 +1,10 @@
 function Navbar() {
   return (
-    <header>
+    <header className="navbar">
       <nav>
         <div className="container">
           <div className="navLogo">
-            <img
-              src="https://www.solarenergy.org/wp-content/uploads/2020/06/SEI-Logo-Color-Web.png"
-              alt="Logo"
-            />
+            <img className="logo" src="/asset/Sunny.svg" alt="Sunny Logo" />
           </div>
         </div>
       </nav>

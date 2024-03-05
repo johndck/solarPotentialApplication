@@ -9,6 +9,7 @@ function SolarPotential() {
   const [coordinates, setCoordinates] = useState({});
   const [isCoordinatesAvailable, setIsCoordinatesAvailable] = useState(false);
   const [showResults, setShowResults] = useState(false);
+  const [resultsRendered, setResultsRendered] = useState(false);
 
   return (
     <>
@@ -18,13 +19,22 @@ function SolarPotential() {
         isCoordinatesAvailable={isCoordinatesAvailable}
         setIsCoordinatesAvailable={setIsCoordinatesAvailable}
         setShowResults={setShowResults}
+        resultsRendered={resultsRendered}
+        setResultsRendered={setResultsRendered}
       />
       <Address
         isCoordinatesAvailable={isCoordinatesAvailable}
         coordinates={coordinates}
         setShowResults={setShowResults}
+        resultsRendered={resultsRendered}
+        setResultsRendered={setResultsRendered}
       />
-      <SolarEstimate showResults={showResults} coordinates={coordinates} />
+      <SolarEstimate
+        showResults={showResults}
+        coordinates={coordinates}
+        resultsRendered={resultsRendered}
+        setResultsRendered={setResultsRendered}
+      />
     </>
   );
 }

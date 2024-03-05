@@ -12,6 +12,8 @@ function Search({
   isCoordinatesAvailable,
   setIsCoordinatesAvailable,
   setShowResults,
+  resultsRendered,
+  setResultsRendered,
 }) {
   // detects input box changes from the user
   // holds an array of postcode results from the API
@@ -64,8 +66,6 @@ function Search({
         } else {
           setCoordinates(data.result);
           setIsCoordinatesAvailable(true);
-
-          console.log(`Your selected postcode was: ${selectedPostcode}`);
           console.log(
             `Coordinates for ${postcode}: ${data.result.latitude}, ${data.result.longitude}`
           );
@@ -77,40 +77,44 @@ function Search({
   }
 
   return (
-    <div className="search-container">
-      <input
-        type="text"
-        maxLength={8}
-        value={input}
-        onChange={(event) => {
-          setInput(event.target.value);
-          setSelectedPostcode("");
-          if (event.target.value === "") {
-            setPostcodes([]);
-            setErrorMessage("");
-            setIsCoordinatesAvailable(false);
-            setShowResults(false);
-            setCoordinates({});
-          }
-        }}
-        placeholder="enter your postcode"
-      />
+    <div className="searchContentContainer">
+      <div className="search-container">
+        <input
+          className="searchInput"
+          type="text"
+          maxLength={8}
+          value={input}
+          onChange={(event) => {
+            setInput(event.target.value.toUpperCase());
+            setSelectedPostcode("");
+            if (event.target.value === "" || event.target.value.length < 3) {
+              setPostcodes([]);
+              setErrorMessage("");
+              setIsCoordinatesAvailable(false);
+              setShowResults(false);
+              setCoordinates({});
+              setResultsRendered(false);
+            }
+          }}
+          placeholder="Search a location"
+        />
 
-      {errorMessage && <div className="error-message">{errorMessage}</div>}
+        {errorMessage && <div className="error-message">{errorMessage}</div>}
 
-      {input.length >= 3 && postcodes.length > 0 && !selectedPostcode && (
-        <div className="dropdown">
-          {postcodes.map((postcode, index) => (
-            <div
-              key={index}
-              className="dropdown-item"
-              onClick={() => handlePostcodeClick(postcode)}
-            >
-              {postcode}
-            </div>
-          ))}
-        </div>
-      )}
+        {input.length >= 3 && postcodes.length > 0 && !selectedPostcode && (
+          <div className="dropdown">
+            {postcodes.map((postcode, index) => (
+              <div
+                key={index}
+                className="dropdown-item"
+                onClick={() => handlePostcodeClick(postcode)}
+              >
+                {postcode}
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 }

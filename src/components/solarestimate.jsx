@@ -1,7 +1,12 @@
 import { useEffect } from "react";
 import { useState } from "react";
 
-function SolarEstimate({ showResults, coordinates }) {
+function SolarEstimate({
+  showResults,
+  coordinates,
+  resultsRendered,
+  setResultsRendered,
+}) {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
 
@@ -27,6 +32,7 @@ function SolarEstimate({ showResults, coordinates }) {
             const data = await response.json();
             setData(data);
             setError(null);
+            setResultsRendered(true);
           } catch (error) {
             if (error.name === "TypeError") {
               setError(
@@ -42,23 +48,40 @@ function SolarEstimate({ showResults, coordinates }) {
       }
       fetchSolarData();
     },
-    [coordinates, showResults]
+    [coordinates, showResults, setResultsRendered]
   );
 
   return (
     showResults && (
-      <div className="solarEstimate">
-        <div>Solar Estimate</div>
-        {error ? (
-          <p>{error}</p>
-        ) : data &&
-          data.outputs &&
-          data.outputs.totals &&
-          data.outputs.totals.fixed ? (
-          <p> Total: {data.outputs.totals.fixed.E_y}</p>
-        ) : (
-          <p>Loading...</p>
-        )}
+      <div className="searchContentContainer">
+        <div className="section-block"></div>
+        <div className="addressConfirmation">
+          <div className="solarEstimate">
+            <h3>Estimated energy from Solar: </h3>
+            {error ? (
+              <p>{error}</p>
+            ) : data &&
+              data.outputs &&
+              data.outputs.totals &&
+              data.outputs.totals.fixed ? (
+              <div>
+                <p>
+                  {" "}
+                  Yearly PV energy: {data.outputs.totals.fixed.E_y}kWh
+                  (potential)
+                </p>
+                <p>
+                  {" "}
+                  Monthly PV energy: {data.outputs.totals.fixed.E_m}
+                  kWh (potential)
+                </p>
+                <p>Yearly Irradiance: {data.outputs.totals.fixed["H(i)_y"]}</p>
+              </div>
+            ) : (
+              <p>Loading...</p>
+            )}
+          </div>
+        </div>
       </div>
     )
   );

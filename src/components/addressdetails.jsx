@@ -1,6 +1,12 @@
 // this takes the returned coordinates object which has all of the address details for the selected postcode
 
-function Address({ coordinates, isCoordinatesAvailable, setShowResults }) {
+function Address({
+  coordinates,
+  isCoordinatesAvailable,
+  setShowResults,
+  resultsRendered,
+  setResultsRendered,
+}) {
   function handleClick() {
     setShowResults(true);
   }
@@ -8,14 +14,23 @@ function Address({ coordinates, isCoordinatesAvailable, setShowResults }) {
   return (
     <>
       {isCoordinatesAvailable && (
-        <div className="addressConfirmation">
-          <p>
-            {" "}
-            We will find you solar potential data for {
-              coordinates.postcode
-            } in {coordinates.admin_district}
-          </p>
-          <button onClick={handleClick}>let me see</button>
+        <div className="searchContentContainer">
+          <div className="addressConfirmation">
+            <div className="section-block"></div>
+            <div className="addressConfirmationText">
+              <p>
+                {" "}
+                Looking good 🤗 ... we have some solar potential info for{" "}
+                {coordinates.postcode} in {coordinates.admin_district}.
+              </p>
+            </div>
+
+            {!resultsRendered && (
+              <button className="addressConfirmationBtn" onClick={handleClick}>
+                🤔 show me
+              </button>
+            )}
+          </div>
         </div>
       )}
     </>

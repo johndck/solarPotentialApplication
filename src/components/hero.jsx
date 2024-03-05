@@ -3,11 +3,13 @@ import SolarPotential from "./solarPotential";
 
 function Hero() {
   return (
-    <div className="container">
-      <div className="addressFinder">
-        <SolarPotential />
+    <section className="potential">
+      <div className="container">
+        <div className="addressFinder">
+          <SolarPotential />
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 
