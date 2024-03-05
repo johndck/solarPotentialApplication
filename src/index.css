@@ -386,6 +386,7 @@ h1 {
   .coreFooterGrid {
     grid-template-columns: 1fr 1fr 1fr;
     padding-bottom: 2rem;
+    gap: 1rem;
   }
 
   .contact-grid {

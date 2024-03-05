@@ -9,7 +9,7 @@ function Footer() {
             <div>About</div>
             <div>About</div>
             <div>Privacy Notice</div>
-            <div>Terms & Conditions</div>
+            <div>T&Cs</div>
           </div>
 
           <div className="contact-grid">
