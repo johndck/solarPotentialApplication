@@ -1,8 +1,51 @@
 function Footer() {
   return (
-    <section>
+    <section className="footerSection">
       <div className="container">
-        <p>Footer content </p>
+        <div className="footerContent">
+          <div className="coreFooterGrid">
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>Privacy Notice</div>
+            <div>Terms & Conditions</div>
+          </div>
+
+          <div className="contact-grid">
+            <div>
+              <div>
+                <form className="signupForm">
+                  <label htmlFor="email">Email address:</label>
+                  <input
+                    className="contactEmail"
+                    type="email"
+                    id="email"
+                    name="email"
+                    autoComplete="email"
+                    required
+                  />
+                  <button className="contact-submit" type="submit">
+                    Sign up for updates
+                  </button>
+                </form>
+              </div>
+            </div>
+            <div className="footerGBcontainer">
+              <div>
+                <img
+                  className="footerGB"
+                  src="/assets/madeinUK.png"
+                  alt="Website made in the UK"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="footerLogo">
+            <img src="/assets/Sunny.svg" alt="Image 1" />
+          </div>
+        </div>
       </div>
     </section>
   );

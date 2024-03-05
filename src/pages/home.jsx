@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Hero from "../components/hero";
 import Herobanner from "../components/herobanner";
 import SunnyDetails from "../components/aboutSunny";
+import Marketing from "../components/marketing";
 
 function Home() {
   return (
@@ -9,6 +10,7 @@ function Home() {
       <Herobanner />
       <Hero />
       <SunnyDetails />
+      <Marketing />
     </div>
   );
 }

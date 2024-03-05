@@ -4,7 +4,7 @@ function Navbar() {
       <nav>
         <div className="container">
           <div className="navLogo">
-            <img className="logo" src="/asset/Sunny.svg" alt="Sunny Logo" />
+            <img className="logo" src="/assets/Sunny.svg" alt="Sunny Logo" />
           </div>
         </div>
       </nav>

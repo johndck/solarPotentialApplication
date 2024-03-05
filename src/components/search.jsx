@@ -82,6 +82,8 @@ function Search({
         <input
           className="searchInput"
           type="text"
+          name="postcodesearch"
+          id="searchforpostcode"
           maxLength={8}
           value={input}
           onChange={(event) => {

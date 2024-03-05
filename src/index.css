@@ -77,7 +77,7 @@ html {
   display: flex;
   justify-content: start;
   padding-top: 1.5rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .logo {
@@ -267,6 +267,77 @@ html {
   color: var(--background-color);
 }
 
+/* marketing section */
+
+.image-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: auto;
+}
+
+/* -- Footer -- */
+
+.footerSection {
+  background-color: var(--background-color);
+  padding-top: 2rem;
+}
+
+.footContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.coreFooterGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  padding-bottom: 2rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding-bottom: 2rem;
+  gap: 1rem;
+}
+
+.signupForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footerLogo {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+
+.contact-submit {
+  width: 10rem;
+  padding: 0.5rem 2rem;
+}
+
+.contactEmail {
+  width: 50%;
+  margin-bottom: 1rem;
+}
+
+.footerGBcontainer {
+  text-align: right;
+  padding-right: 5rem;
+}
+
+.footerGB {
+  width: 4rem;
+  height: auto;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -306,5 +377,22 @@ h1 {
 
   .sunnyDetailsSection {
     grid-template-columns: 100%;
+  }
+
+  .image-container {
+    grid-template-columns: 100%;
+  }
+
+  .coreFooterGrid {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 2rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: 100%;
+  }
+
+  .footerGBcontainer {
+    text-align: left;
   }
 }
