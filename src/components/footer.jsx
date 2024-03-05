@@ -44,6 +44,7 @@ function Footer() {
 
           <div className="footerLogo">
             <img src="/assets/Sunny.svg" alt="Image 1" />
+            <div>version 0.9 5 Mar 23</div>
           </div>
         </div>
       </div>

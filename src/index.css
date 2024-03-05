@@ -239,32 +239,61 @@ html {
 .sunnyDetailsSection {
   display: grid;
   grid-template-columns: 50% 50%;
-  height: 12rem;
 }
 .detailsLeft {
   background-color: var(--siteRed);
 }
 .detailsRight {
-  background-color: var(--siteGreen);
+  background-color: var(--siteblue);
+}
+
+.detailsLeftContent h3 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: var(--background-color);
+  font-weight: 400;
+}
+
+.detailsRightContent h3 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: var(--background-color);
+  font-weight: 400;
 }
 
 .contentLeft {
-  padding-left: 21%;
+  padding: 2rem;
+  text-align: center;
 }
+
+.detailsLeftContent h3 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: var(--background-color);
+}
+
+.detailsLeftContent ul {
+  text-align: left;
+  padding-left: 5rem;
+}
+
 .contentRight {
-  padding-right: 21%;
+  padding: 2rem;
+  text-align: center;
 }
 
-.detailsLeft h3 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  color: var(--background-color);
+.detailsRightContent ul {
+  text-align: left;
+  padding-left: 5rem;
 }
 
-.detailsRight h3 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  color: var(--background-color);
+.marketingBlock {
+  display: inline-block;
+  width: 4rem;
+  height: 0.3rem;
+  background-color: var(--siteYellow);
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 /* marketing section */
@@ -314,8 +343,10 @@ html {
 
 .footerLogo {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   padding-bottom: 2rem;
+  font-size: smaller;
 }
 
 .contact-submit {
@@ -395,5 +426,13 @@ h1 {
 
   .footerGBcontainer {
     text-align: left;
+  }
+
+  .detailsLeftContent ul {
+    padding-left: 1rem;
+  }
+
+  .detailsRightContent ul {
+    padding-left: 1rem;
   }
 }
