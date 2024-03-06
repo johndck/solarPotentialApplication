@@ -23,7 +23,9 @@ function SolarEstimate({
             let lat = coordinates.latitude;
             let long = coordinates.longitude;
             const response = await fetch(
-              `http://localhost:3000/api/solar?lat=${lat}&long=${long}`
+              `${
+                import.meta.env.VITE_API_URL
+              }/api/solar?lat=${lat}&long=${long}`
             );
             if (!response.ok) {
               throw new Error(`Solar Fetch error: ${response.status}`);

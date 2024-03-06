@@ -28,7 +28,7 @@ function Search({
       if (input.length >= 3 && isValidPostcode(input)) {
         try {
           const response = await fetch(
-            `http://localhost:3000/api/auto?code=${input}`
+            `${import.meta.env.VITE_API_URL}/api/auto?code=${input}`
           );
           const data = await response.json();
           if (data.status === 200) {
@@ -59,7 +59,7 @@ function Search({
 
     try {
       const response = await fetch(
-        `http://localhost:3000/api/getLat?postcode=${postcode}`
+        `${import.meta.env.VITE_API_URL}/api/getLat?postcode=${postcode}`
       );
       const data = await response.json();
       if (data.status === 200) {

@@ -1,4 +1,3 @@
-import Search from "./search";
 import SolarPotential from "./solarPotential";
 
 function Hero() {
