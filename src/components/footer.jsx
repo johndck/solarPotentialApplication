@@ -1,3 +1,5 @@
+import EmailForm from "./submitemail";
+
 function Footer() {
   return (
     <section className="footerSection">
@@ -15,20 +17,7 @@ function Footer() {
           <div className="contact-grid">
             <div>
               <div>
-                <form className="signupForm">
-                  <label htmlFor="email">Email address:</label>
-                  <input
-                    className="contactEmail"
-                    type="email"
-                    id="email"
-                    name="email"
-                    autoComplete="email"
-                    required
-                  />
-                  <button className="contact-submit" type="submit">
-                    Sign up for updates
-                  </button>
-                </form>
+                <EmailForm />
               </div>
             </div>
             <div className="footerGBcontainer">
