@@ -41,7 +41,7 @@ function EmailForm() {
   }
 
   if (emailSent) {
-    return <p>Email sent</p>;
+    return <p>Email sent 👍</p>;
   }
 
   if (failedEmail) {
