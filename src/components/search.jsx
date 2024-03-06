@@ -42,6 +42,9 @@ function Search({
           }
         } catch (error) {
           console.error(error);
+          setErrorMessage(
+            "We are not able to return any postcodes because there is no internet connection."
+          );
         }
       }
     };
