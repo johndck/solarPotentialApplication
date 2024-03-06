@@ -275,6 +275,12 @@ html {
   text-align: center;
 }
 
+.eulogo {
+  width: 2rem;
+  height: auto;
+  vertical-align: bottom;
+}
+
 .detailsLeftContent h3 {
   padding-top: 1rem;
   padding-bottom: 1rem;
