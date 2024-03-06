@@ -2,7 +2,7 @@ function Herobanner() {
   return (
     <section className="standardSectionBackground">
       <div className="container herobanner">
-        <div className="heroHeadline">
+        <div className="heroHeadline heroText">
           <h2>
             Get clued up on <span className="s">S</span>
             <span className="o">o</span>

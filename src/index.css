@@ -96,9 +96,9 @@ html {
 
 .heroHeadline {
   padding-top: 1rem;
-  width: 10rem;
+  width: 14rem;
   padding-bottom: 1rem;
-  font-size: 1.2rem;
+  font-size: 1.7rem;
 }
 
 .heroText {
@@ -178,6 +178,7 @@ html {
   padding: 0.2rem 2rem;
   border-radius: 10px;
   cursor: pointer;
+  font-size: 1.2rem;
 }
 
 .searchContentContainer {
