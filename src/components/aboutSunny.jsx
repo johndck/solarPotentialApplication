@@ -17,8 +17,7 @@ function SunnyDetails() {
                 that the solar panels can produce under standard conditions.
               </li>
               <li>
-                We assume that the panels will loose about 20% of their
-                capacity.
+                We assume that the panels will lose about 20% of their capacity.
               </li>
               <li>
                 This data is provided to give you an idea of the potential
