@@ -13,12 +13,34 @@ function Footer() {
               </Link>
             </div>
             <div>
-              <Link to="/about">About</Link>
+              <Link to="/about" onClick={() => window.scrollTo(0, 0)}>
+                About
+              </Link>
             </div>
-            <div>Social media</div>
+            <div>
+              <ul className="social">
+                <li>
+                  <img src="/assets/insta.svg" alt="Instagram" />
+                </li>
+                <li>
+                  <img src="/assets/tt.svg" alt="TikTok" />
+                </li>
+                <li>
+                  <img src="/assets/x.svg" alt="X formerly Twitter" />
+                </li>
+              </ul>
+            </div>
 
-            <div>Privacy Notice</div>
-            <div>T&Cs</div>
+            <div>
+              <Link to="/t&cs" onClick={() => window.scrollTo(0, 0)}>
+                T&CS
+              </Link>
+            </div>
+            <div>
+              <Link to="/privacy" onClick={() => window.scrollTo(0, 0)}>
+                Privacy
+              </Link>
+            </div>
           </div>
 
           <div className="contact-grid">
@@ -40,7 +62,7 @@ function Footer() {
 
           <div className="footerLogo">
             <img src="/assets/Sunny.svg" alt="Image 1" />
-            <div>version 0.94 7 Mar 23</div>
+            <div>version 0.95 7 Mar 24</div>
           </div>
         </div>
       </div>

@@ -101,6 +101,10 @@ html {
   min-height: 14rem;
 }
 
+.herobannerAbout {
+  min-height: 14rem;
+}
+
 .heroHeadline {
   padding-top: 1rem;
   width: 14rem;
@@ -344,6 +348,25 @@ html {
   padding-bottom: 2rem;
 }
 
+/* Social media icons */
+
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  list-style-type: none;
+}
+
+.social li {
+  margin-left: 1rem;
+  margin-top: 5px;
+}
+
+.social li img {
+  width: 20px;
+  height: 20px;
+}
+
 .contact-grid {
   display: grid;
   grid-template-columns: 50% 50%;
@@ -410,12 +433,12 @@ html {
 /* styling for the email form */
 
 a {
-  font-weight: 500;
-  color: #646cff;
+  font-weight: 700;
+  color: var(--sitedarkGrenn);
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: var(--siteYellow);
 }
 
 h1 {

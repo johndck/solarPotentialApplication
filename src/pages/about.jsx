@@ -1,9 +1,9 @@
-import Herobanner from "../components/herobanner";
+import Aboutbanner from "../components/aboutbanner";
 
 function About() {
   return (
     <div>
-      <Herobanner />
+      <Aboutbanner />
     </div>
   );
 }
