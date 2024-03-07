@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/home";
 import About from "./pages/about";
-import Notify from "./pages/notify";
 import Results from "./pages/results";
 import Error from "./pages/error";
 import Navbar from "./components/navbar";
@@ -18,7 +17,6 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/t&cs" element={<TandC />} />
         <Route path="/privacy" element={<Privacy />} />
-        <Route path="/notify" element={<Notify />} />
         <Route path="/results" element={<Results />} />
         <Route path="*" element={<Error />} />
       </Routes>
