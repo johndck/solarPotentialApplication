@@ -194,6 +194,13 @@ html {
   color: var(--sitedarkGrenn);
 }
 
+.energyData {
+  font-weight: 700;
+}
+.energyDataSpec {
+  font-size: smaller;
+}
+
 .searchContentContainer {
   display: flex;
   flex-direction: column;
@@ -240,8 +247,14 @@ html {
   width: 80%;
   flex-direction: column;
   background-color: var(--siteYellow);
-  margin-bottom: 1rem;
-  /*border: 1px solid white;*/
+  margin-bottom: 0.5rem;
+  border: 3px solid var(--siteRed);
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.solarExplanation {
+  margin-top: 1rem;
 }
 
 .solarEstimate h3 {
@@ -272,7 +285,8 @@ html {
   padding-top: 1rem;
   padding-bottom: 1rem;
   color: var(--background-color);
-  font-weight: 400;
+  font-weight: 700;
+  font-size: 1.5rem;
 }
 
 .contentLeft {
@@ -290,6 +304,8 @@ html {
   padding-top: 1rem;
   padding-bottom: 1rem;
   color: var(--background-color);
+  font-weight: 700;
+  font-size: 1.5rem;
 }
 
 .detailsLeftContent ul {
@@ -299,6 +315,7 @@ html {
 
 .detailsLeftContent ul li {
   font-size: 1.2rem;
+  padding: 10px 0;
 }
 
 .contentRight {
@@ -313,6 +330,7 @@ html {
 
 .detailsRightContent ul li {
   font-size: 1.2rem;
+  padding: 10px 0;
 }
 
 .marketingBlock {
@@ -523,5 +541,10 @@ h1 {
     width: 5rem;
     padding: 0.5rem 1rem;
     margin-top: 1rem;
+  }
+
+  .solarEstimate {
+    width: 100%;
+    padding: 1rem;
   }
 }

@@ -15,12 +15,12 @@ function Herobanner() {
         <div className="heroText">
           <p>
             {" "}
-            Find out how much clean Solar Energy you might be able to generate
+            Find out how much energy you could generate from the sun
             <span className="s">.</span>
           </p>
         </div>
 
-        <p className="heroCTA"> Enter your postcode below:</p>
+        <p className="heroCTA"> Simply tell us your postcode:</p>
       </div>
     </section>
   );

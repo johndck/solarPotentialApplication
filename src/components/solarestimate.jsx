@@ -59,7 +59,7 @@ function SolarEstimate({
         <div className="section-block"></div>
         <div className="addressConfirmation">
           <div className="solarEstimate">
-            <h3>Estimated energy from Solar: </h3>
+            <h3>Estimated energy from the sun: </h3>
             {error ? (
               <p>{error}</p>
             ) : data &&
@@ -69,15 +69,32 @@ function SolarEstimate({
               <div>
                 <p>
                   {" "}
-                  Yearly PV energy: {data.outputs.totals.fixed.E_y}kWh
-                  (potential)
+                  Total for a year:{" "}
+                  <span className="energyData">
+                    {Math.round(data.outputs.totals.fixed.E_y)}
+                  </span>
+                  <span className="energyDataSpec"> kWh</span> (potential)
                 </p>
                 <p>
                   {" "}
-                  Monthly PV energy: {data.outputs.totals.fixed.E_m}
-                  kWh (potential)
+                  Each month:{" "}
+                  <span className="energyData">
+                    {Math.round(data.outputs.totals.fixed.E_m)}
+                  </span>
+                  <span className="energyDataSpec"> kWh</span> (potential)
                 </p>
-                <p>Yearly Irradiance: {data.outputs.totals.fixed["H(i)_y"]}</p>
+                <p>
+                  Yearly in-plane irradation:{" "}
+                  <span className="energyData">
+                    {data.outputs.totals.fixed["H(i)_y"]}{" "}
+                  </span>
+                  <span className="energyDataSpec">kWh/m2</span>
+                </p>
+                <p className="solarExplanation">
+                  This means you might be able to generate up to{" "}
+                  {Math.round(data.outputs.totals.fixed.E_y)} kWh from the sun
+                  each year from solar panels.
+                </p>
               </div>
             ) : (
               <p>Loading...</p>
