@@ -238,7 +238,8 @@ html {
 }
 
 .dropdown-item:hover {
-  background: var(--siteYellow);
+  background: var(--siteGreen);
+  color: white;
 }
 
 .solarEstimate {
