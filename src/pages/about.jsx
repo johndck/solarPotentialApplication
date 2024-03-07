@@ -1,10 +1,9 @@
-import { Link } from "react-router-dom";
+import Herobanner from "../components/herobanner";
 
 function About() {
   return (
     <div>
-      <h1>About</h1>
-      <Link to="/">Home</Link>
+      <Herobanner />
     </div>
   );
 }

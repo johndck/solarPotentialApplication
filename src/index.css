@@ -56,6 +56,7 @@ input {
 
 html {
   font-size: 20px;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -350,10 +351,42 @@ html {
   gap: 1rem;
 }
 
-.signupForm {
+.emailFormHolder {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  align-items: start;
+  padding-bottom: 2rem;
+}
+
+.emailTopMsg {
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  color: var(--sitedarkGrenn);
+}
+
+.emailForm {
+  display: flex;
+  flex-direction: row;
+}
+
+.emailSubmitInput {
+  border-radius: 0;
+  border: 1px solid var(--sitedarkGrenn);
+  padding: 0.5rem;
+  width: 14rem;
+}
+
+.emailWarning {
+  padding-top: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--sitedarkGrenn);
+}
+
+.emailSubmitbtn {
+  margin-left: 1rem;
+  background-color: var(--siteYellow);
+  border: none;
+  padding: 0 1rem;
 }
 
 .footerLogo {
@@ -364,25 +397,17 @@ html {
   font-size: smaller;
 }
 
-.contact-submit {
-  width: 10rem;
-  padding: 0.5rem 2rem;
-}
-
-.contactEmail {
-  width: 50%;
-  margin-bottom: 1rem;
-}
-
 .footerGBcontainer {
   text-align: right;
-  padding-right: 5rem;
 }
 
 .footerGB {
-  width: 4rem;
+  width: 6rem;
   height: auto;
+  padding-right: 2rem;
 }
+
+/* styling for the email form */
 
 a {
   font-weight: 500;
@@ -449,5 +474,16 @@ h1 {
 
   .detailsRightContent ul {
     padding-left: 1rem;
+  }
+
+  .emailForm {
+    flex-direction: column;
+  }
+
+  .emailSubmitbtn {
+    margin: 0;
+    width: 5rem;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
   }
 }

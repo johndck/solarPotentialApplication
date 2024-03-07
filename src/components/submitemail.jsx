@@ -5,9 +5,17 @@ function EmailForm() {
   const [emailSent, setEmailSent] = useState(false);
   const [failedEmail, setFailedEmail] = useState(false);
   const [sendingEmail, setSendingEmail] = useState(false);
+  const [invalidEmail, setInvalidEmail] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setInvalidEmail(true);
+      return;
+    }
+    setInvalidEmail(false);
     setSendingEmail(true);
 
     const response = await fetch(
@@ -37,30 +45,44 @@ function EmailForm() {
   };
 
   if (sendingEmail) {
-    return <p>Sending email...</p>;
+    return <p className="emailTopMsg">Sending your email...</p>;
   }
 
   if (emailSent) {
-    return <p>Email sent 👍</p>;
+    return <p className="emailTopMsg">Email received, thanks 👍</p>;
   }
 
   if (failedEmail) {
-    return <p>Sorry email failed to send</p>;
+    return <p className="emailTopMsg">Sorry email failed to send 🥴</p>;
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Email:
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-      </label>
-      <button type="submit">Send</button>
-    </form>
+    <div>
+      {invalidEmail && <p>Please add a valid email.</p>}
+      <p className="emailTopMsg">Get notified when we release new features.</p>
+
+      <form onSubmit={handleSubmit} className="emailForm">
+        <label>
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => {
+              setEmail(e.target.value);
+              if (e.target.value === "") {
+                setInvalidEmail(false);
+              }
+            }}
+            required
+            placeholder="Your email address"
+            className="emailSubmitInput"
+          />
+        </label>
+        <button type="submit" className="emailSubmitbtn">
+          Send
+        </button>
+      </form>
+      <p className="emailWarning">This is a test service currently.</p>
+    </div>
   );
 }
 

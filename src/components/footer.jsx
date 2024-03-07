@@ -1,4 +1,5 @@
 import EmailForm from "./submitemail";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -6,17 +7,23 @@ function Footer() {
       <div className="container">
         <div className="footerContent">
           <div className="coreFooterGrid">
-            <div>About</div>
-            <div>About</div>
-            <div>About</div>
-            <div>About</div>
+            <div>
+              <Link to="/" onClick={() => window.scrollTo(0, 0)}>
+                Home
+              </Link>
+            </div>
+            <div>
+              <Link to="/about">About</Link>
+            </div>
+            <div>Social media</div>
+
             <div>Privacy Notice</div>
             <div>T&Cs</div>
           </div>
 
           <div className="contact-grid">
             <div>
-              <div>
+              <div className="emailFormHolder">
                 <EmailForm />
               </div>
             </div>
@@ -33,7 +40,7 @@ function Footer() {
 
           <div className="footerLogo">
             <img src="/assets/Sunny.svg" alt="Image 1" />
-            <div>version 0.93 6 Mar 23</div>
+            <div>version 0.94 7 Mar 23</div>
           </div>
         </div>
       </div>
