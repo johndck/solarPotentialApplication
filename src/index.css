@@ -297,6 +297,10 @@ html {
   padding-left: 5rem;
 }
 
+.detailsLeftContent ul li {
+  font-size: 1.2rem;
+}
+
 .contentRight {
   padding: 2rem;
   text-align: center;
@@ -305,6 +309,10 @@ html {
 .detailsRightContent ul {
   text-align: left;
   padding-left: 5rem;
+}
+
+.detailsRightContent ul li {
+  font-size: 1.2rem;
 }
 
 .marketingBlock {
@@ -410,6 +418,13 @@ html {
   background-color: var(--siteYellow);
   border: none;
   padding: 0 1rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.emailSubmitbtn:hover {
+  background-color: var(--siteRed);
+  color: var(--background-color);
 }
 
 .footerLogo {
