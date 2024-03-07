@@ -59,6 +59,10 @@ html {
   scroll-behavior: smooth;
 }
 
+p {
+  font-size: 1.1rem;
+}
+
 .container {
   width: 1200px;
   max-width: 80%;
@@ -112,6 +116,8 @@ html {
   font-size: 1.7rem;
 }
 
+/* updated style for T&CSs page */
+
 .heroText {
   font-weight: 700;
   color: var(--sitedarkGrenn);
@@ -137,6 +143,12 @@ html {
 .heroCTA {
   padding-top: 0.5rem;
   font-size: 0.8rem;
+}
+
+.heroCTAAbout {
+  padding-top: 0.5rem;
+  font-size: 1rem;
+  max-width: 75%;
 }
 
 /* -- Main sections */
@@ -547,5 +559,9 @@ h1 {
   .solarEstimate {
     width: 100%;
     padding: 1rem;
+  }
+
+  .heroCTAAbout {
+    max-width: 90%;
   }
 }

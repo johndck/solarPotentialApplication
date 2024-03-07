@@ -15,38 +15,42 @@ function Privacybanner() {
         <div className="heroText">
           <p>
             {" "}
-            Find out how much clean Solar Energy you might be able to generate
+            Effective date: 7 March 2024
             <span className="s">.</span>
           </p>
         </div>
 
-        <p className="heroCTA">
+        <p className="heroCTAAbout">
           {" "}
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia ut
-          vitae commodi, fuga repellendus unde itaque expedita, error at
-          assumenda, quas libero aperiam optio vel consequatur modi ullam
-          perspiciatis sapiente.
+          Welcome to the Sunny website. Your privacy is important, and we are
+          committed to protecting it. This notice explains our online
+          information practices and the choices you can make about the
+          information collected through our website.
         </p>
-        <p className="heroCTA">
+        <p className="heroCTAAbout">
           {" "}
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia ut
-          vitae commodi, fuga repellendus unde itaque expedita, error at
-          assumenda, quas libero aperiam optio vel consequatur modi ullam
-          perspiciatis sapiente.
+          We do not collect any personal information about you when you visit
+          our website. This means you can visit our site without telling us who
+          you are or revealing any personally identifiable information about
+          yourself.
         </p>
-        <p className="heroCTA">
+        <p className="heroCTAAbout">
           {" "}
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia ut
-          vitae commodi, fuga repellendus unde itaque expedita, error at
-          assumenda, quas libero aperiam optio vel consequatur modi ullam
-          perspiciatis sapiente.
+          Since we do not collect any personal information, we do not use,
+          store, or share any such information. Our website is designed for
+          research purposes, and we aim to provide information and resources
+          without compromising your privacy.
         </p>
-        <p className="heroCTA">
+        <p className="heroCTAAbout">
           {" "}
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia ut
-          vitae commodi, fuga repellendus unde itaque expedita, error at
-          assumenda, quas libero aperiam optio vel consequatur modi ullam
-          perspiciatis sapiente.
+          We take reasonable precautions to protect our website and any
+          non-personal information it may process from loss, misuse,
+          unauthorized access, disclosure, alteration, or destruction.
+        </p>
+        <p className="heroCTAAbout">
+          {" "}
+          If you have any questions or concerns about this Privacy Notice or our
+          information practices, please contact us at johnturnerdick@gmail.com.
         </p>
       </div>
     </section>
