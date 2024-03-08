@@ -36,7 +36,7 @@ function SunnyDetails() {
       <div className="detailsRight">
         <div className="contentRight">
           <div className="detailsRightContent">
-            <h3>Important points to notes </h3>
+            <h3>Important points to note </h3>
             <ul>
               <li>
                 The number and size of panels will impact the amount of energy
